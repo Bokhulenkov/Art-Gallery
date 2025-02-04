@@ -12,7 +12,6 @@ class ArtistCell: UITableViewCell {
     static let identifier = ArtistCell.description()
     
     //    MARK: - Private Properties
-    private let networkService = NetworkService()
     
     private let titleLabel: UILabel = {
         let label = UILabel()

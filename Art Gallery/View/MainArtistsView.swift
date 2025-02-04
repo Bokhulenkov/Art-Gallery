@@ -1,5 +1,5 @@
 //
-//  ArtistsView.swift
+//  MainArtistsView.swift
 //  Art Gallery
 //
 //  Created by Alexander Bokhulenkov on 29.01.2025.
@@ -7,18 +7,10 @@
 
 import UIKit
 
-class ArtistsView: UIView {
+final class MainArtistsView: UIView {
     
     // MARK: - Private Properties
-    private let titleLabel: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 24, weight: .bold)
-        label.textAlignment = .left
-        label.textColor = .black //333647
-        label.text = "Artists"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    private let titleLabel = LabelFactory.makeTitleLabel(text: "Artists")
     
     private let addButton: UIButton = {
         let button = UIButton(type: .system)
@@ -83,7 +75,7 @@ class ArtistsView: UIView {
 }
 
 //  MARK: - Extensions Constraints
-extension ArtistsView {
+extension MainArtistsView {
     func setConstraints() {
         NSLayoutConstraint.activate([
             hStack.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),

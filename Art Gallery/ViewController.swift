@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     private var artists: [Artist] = []
     
-    private let artistsView = ArtistsView()
+    private let artistsView = MainArtistsView()
     
     override func loadView() {
         view = artistsView
